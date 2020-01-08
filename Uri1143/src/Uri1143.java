@@ -14,6 +14,7 @@ public class Uri1143 {
 						
 			
 		}
+		input.close();
 				
 		
 	}
