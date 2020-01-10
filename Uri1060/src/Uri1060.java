@@ -10,11 +10,12 @@ public class Uri1060 {
 			a = input.nextDouble();
 			if(a > 0) {
 				positivos +=1;
-				
+					input.close();
 			}
 		}
 		System.out.print(positivos + " valores positivos\n");
 		
+	
 		
 		
 		

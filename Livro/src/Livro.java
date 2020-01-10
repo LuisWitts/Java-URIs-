@@ -6,20 +6,18 @@ public class Livro {
 	private int ano;
 	private int estante;
 	private int prateleira;
-	private boolean emprestado;
+	private boolean emprestado=true;
 	
 	
 	
-	public Livro(String titulo, String autor, String categoria, int ano, int estante, int prateleira,
-			boolean emprestado) {
+	public Livro(String titulo, String autor, String categoria, int ano, int estante, int prateleira) {
 		
-		this.titulo = titulo;
-		this.autor = autor;
-		this.categoria = categoria;
-		this.ano = ano;
-		this.estante = estante;
+		this.titulo     = titulo;
+		this.autor      = autor;
+		this.categoria  = categoria;
+		this.ano        = ano;
+		this.estante    = estante;
 		this.prateleira = prateleira;
-		this.emprestado = emprestado;
 	}
 	
 	
@@ -75,25 +73,17 @@ public class Livro {
 	
 	
 	
-	void emprestarlivro() {
-		if(emprestado == false) {
-			 emprestado = !emprestado;
-			 System.out.println("Livro emprestado com sucesso");
-			 
-			}else {
-				System.out.println("O livro ja esta emprestado ");
-			}
-				
-			}
-	
-	void devolver() {
-		if(emprestado == true) {
-			 emprestado = !emprestado;
-			 System.out.println("Livro devolvido com sucesso");
-			 
-			}else {
-				System.out.println("O livro ja foi devolvido  ");
-			}
+	public void emprestar() {
+		this.emprestado = true;
+		
+	}
+	public void devolver() {
+		this.emprestado = false;
+		
+	}
+	public void exibirInfo() {
+		System.out.println(titulo);
+		System.out.println(emprestado);
 		
 	}
 	
